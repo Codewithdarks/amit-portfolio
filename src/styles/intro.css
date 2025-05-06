@@ -1,0 +1,409 @@
+/* Entrance Animations */
+@keyframes slideUp {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInScale {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes blobMove {
+  0% {
+    transform: translate(-100%, -100%) translate3d(0, 0, 0);
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-100%, -100%) translate3d(100%, 100%, 0);
+    opacity: 0;
+  }
+}
+
+/* Add this to your existing animations */
+@keyframes infiniteGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Add new animation keyframe */
+@keyframes mouseToggle {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+}
+
+/* Main Styles */
+.intro-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+  background-color: white;
+  text-align: center;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  animation: fadeInScale 0.8s ease-out;
+}
+
+.intro-avatar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 5;
+  animation: fadeInScale 1s ease-out;
+}
+
+.intro-avatar img {
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  object-fit: contain;
+  z-index: 5;
+  position: relative;
+  animation: float 4s ease-in-out infinite;
+}
+
+.intro-text {
+  max-width: 600px;
+}
+
+.intro-heading {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #222;
+  animation: slideUp 0.8s ease-out 0.2s forwards;
+  opacity: 0;
+}
+
+.intro-subtext {
+  font-size: 1.2rem;
+  color: #444;
+  animation: slideUp 0.8s ease-out 0.4s forwards;
+  opacity: 0;
+}
+
+.highlight {
+  color: #6C63FF;
+  opacity: 1;
+}
+
+.intro-text-container {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 24px;
+  padding: 4rem 3rem;
+  margin: -80px auto 120px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 
+    0 8px 32px 0 rgba(31, 38, 135, 0.15),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  text-align: center;
+  z-index: 2;
+  animation: slideUp 0.8s ease-out forwards;
+  opacity: 0;
+  overflow: hidden;
+}
+
+.intro-text-container::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.2),
+    rgba(255, 255, 255, 0.1)
+  );
+  border-radius: 26px;
+  z-index: -1;
+  animation: borderGlow 3s ease-in-out infinite;
+}
+
+.intro-text-container::after {
+  content: '';
+  position: absolute;
+  z-index: -2;
+  top: 50%;
+  left: 50%;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: linear-gradient(
+    141deg,
+    rgba(131, 58, 180, 0.5) 27%,
+    rgba(253, 29, 29, 0.5) 73%,
+    rgba(252, 176, 69, 0.5) 100%
+  );
+  filter: blur(20px);
+  opacity: 0;
+  animation: blobMove 2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+/* Mouse scroll icon styles */
+.scroll-mouse-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 4rem;
+  cursor: pointer;
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translate(-50%);
+  animation: fadeInScale 0.8s ease-out 1s forwards;
+  opacity: 0;
+  transition: transform 0.3s ease;
+}
+
+.scroll-mouse-icon:hover {
+  transform: translate(-50%, -5px);
+}
+
+.mouse {
+  width: 26px;
+  height: 40px;
+  border: 2px solid transparent;
+  background: linear-gradient(white, white) padding-box,
+              linear-gradient(141deg,
+                rgba(131, 58, 180, 1) 27%,
+                rgba(253, 29, 29, 1) 73%,
+                rgba(252, 176, 69, 1) 100%) border-box;
+  border-radius: 15px;
+  position: relative;
+  margin-bottom: 10px;
+  transition: all 0.3s ease;
+  animation: mouseToggle 2s ease-in-out infinite paused;
+}
+
+.scroll-mouse-icon:hover .mouse {
+  animation-play-state: running;
+}
+
+.mouse::before {
+  content: '';
+  width: 4px;
+  height: 8px;
+  background: linear-gradient(
+    141deg,
+    rgba(131, 58, 180, 1) 27%,
+    rgba(253, 29, 29, 1) 73%,
+    rgba(252, 176, 69, 1) 100%
+  );
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 8px;
+  border-radius: 2px;
+  animation: mouseWheel 2s ease-in-out infinite paused;
+}
+
+.scroll-mouse-icon:hover .mouse::before {
+  animation-play-state: running;
+}
+
+/* Custom Scroll Animation */
+.scrolldown {
+  --sizeX: 30px;
+  --sizeY: 50px;
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  width: var(--sizeX);
+  height: var(--sizeY);
+  border: calc(var(--sizeX) / 10) solid transparent;
+  background: linear-gradient(white, white) padding-box,
+              linear-gradient(141deg,
+                rgba(131, 58, 180, 1) 27%,
+                rgba(253, 29, 29, 1) 73%,
+                rgba(252, 176, 69, 1) 100%) border-box;
+  border-radius: 50px;
+  box-sizing: border-box;
+  transform: translateX(-50%);
+  cursor: pointer;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow 0.3s ease;
+  z-index: 10;
+  animation: fadeInScale 0.8s ease-out 1s forwards;
+  opacity: 0;
+}
+
+.scrolldown:hover {
+  transform: translateX(-50%) scale(1.1) translateY(-5px);
+  box-shadow: 0 5px 15px rgba(131, 58, 180, 0.3);
+}
+
+.scrolldown::before {
+  content: "";
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  width: 6px;
+  height: 6px;
+  margin-left: -3px;
+  background-color: #333;
+  border-radius: 100%;
+  animation: scrolldown-anim 2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  box-sizing: border-box;
+  box-shadow: 0px -5px 3px 1px rgba(0, 0, 0, 0.2);
+}
+
+/* Chevrons */
+.chevrons {
+  padding: 6px 0 0 0;
+  margin-left: -3px;
+  margin-top: 48px;
+  width: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.chevrondown {
+  margin-top: -6px;
+  position: relative;
+  border: solid #333;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  transform: rotate(45deg);
+  animation: pulse54012 1.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  border-color: transparent;
+  background: linear-gradient(141deg,
+    rgba(131, 58, 180, 1) 27%,
+    rgba(253, 29, 29, 1) 73%,
+    rgba(252, 176, 69, 1) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.chevrondown:nth-child(2) {
+  animation-delay: 0.5s;
+}
+
+/* Animations */
+@keyframes float {
+  0%, 100% { 
+    transform: translateY(0px) scale(1);
+  }
+  50% { 
+    transform: translateY(-10px) scale(1.02);
+  }
+}
+
+@keyframes borderGlow {
+  0%, 100% { 
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  50% { 
+    opacity: 0.8;
+    transform: scale(1.01);
+  }
+}
+
+@keyframes mouseWheel {
+   0%, 100% {
+    top: 8px;
+    opacity: 1;
+  }
+  50% {
+    top: 20px;
+    opacity: 0;
+  }
+}
+
+@keyframes scrolldown-anim {
+  0% {
+    opacity: 0;
+    height: 6px;
+  }
+  40% {
+    opacity: 1;
+    height: 10px;
+  }
+  80% {
+    transform: translateY(20px);
+    height: 10px;
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(20px);
+    height: 3px;
+    opacity: 0;
+  }
+}
+
+@keyframes pulse54012 {
+  0% { opacity: 0; }
+  50% { opacity: 0.5; }
+  100% { opacity: 0; }
+}
+
+/* Add this new class */
+.animate-infinite {
+  background: linear-gradient(
+    141deg,
+    rgba(131, 58, 180, 1) 27%,
+    rgba(253, 29, 29, 1) 73%,
+    rgba(252, 176, 69, 1) 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: infiniteGradient 3s linear infinite;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .intro-text-container {
+    margin: 1rem auto 100px;
+    padding: 3rem 2rem;
+  }
+  .scroll-mouse-icon {
+    bottom: 20px;
+  }
+}

@@ -1,0 +1,115 @@
+/* Projects Section */
+.projects-section {
+    padding: 4rem 2rem;
+    background-color: #f9f9f9;
+    text-align: center;
+  }
+  
+  .projects-heading {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #333;
+  }
+  
+  /* Container for each project item */
+  .project-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.6s ease-out;
+  }
+  
+  /* Animation when section is in view */
+  .projects-section.animate .project-item {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Hover effect with arrow animation */
+  .project-item::before {
+    content: '→';
+    position: absolute;
+    left: -30px;
+    top: 50%;
+    transform: translateY(-50%) scale(0);
+    font-size: 1.5rem;
+    color: #007bff;
+    transition: transform 0.3s ease, left 0.3s ease;
+  }
+  
+  .project-item:hover::before {
+    left: 10px;
+    transform: translateY(-50%) scale(1);
+  }
+  
+  /* General hover effect for project item */
+  .project-item:hover {
+    transform: translateY(-5px) rotate(1deg);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .project-image img {
+    width: 100%;
+    max-width: 250px;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+  }
+  
+  .project-item:hover .project-image img {
+    transform: scale(1.05);
+  }
+  
+  .project-description {
+    flex: 1;
+    padding-left: 2rem;
+    text-align: left;
+  }
+  
+  .project-description h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+  
+  .project-description p {
+    font-size: 1.1rem;
+    color: #555;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .project-item {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .project-description {
+      padding-left: 0;
+      padding-top: 1rem;
+    }
+  
+    .project-image img {
+      max-width: 80%;
+    }
+  
+    .project-item::before {
+      left: 50%;
+      top: 10px;
+      transform: translateX(-50%) scale(0);
+    }
+  
+    .project-item:hover::before {
+      left: 50%;
+      top: 20px;
+      transform: translateX(-50%) scale(1);
+    }
+  }

@@ -1,0 +1,56 @@
+/* Navbar text and icons */
+.custom-navbar .nav-link,
+.custom-navbar .navbar-brand,
+.custom-navbar .bi {
+  color: #000 !important;
+  font-weight: 600;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover effect with subtle scaling */
+.custom-navbar .nav-link:hover,
+.custom-navbar .navbar-brand:hover,
+.custom-navbar .bi:hover {
+  color: #4e73df !important;
+  opacity: 0.8;
+  transform: scale(1.05);
+}
+
+/* Sticky, thin navbar with blur effect */
+.thin-navbar {
+  padding: 0.8rem 2rem;
+  position: sticky;
+  top: 1rem;
+  z-index: 1050;
+  transition: all 0.3s ease-in-out;
+  margin:0.5rem 1rem 0;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 
+    0 8px 32px 0 rgba(31, 38, 135, 0.15),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+}
+
+/* When scrolled down */
+.blur-navbar.scrolled {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* Optional: Navbar background control */
+.custom-navbar .navbar {
+  border-radius: 16px;
+  padding: 0.5rem 1rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .thin-navbar {
+    margin: 0;
+    border-radius: 0;
+  }
+}

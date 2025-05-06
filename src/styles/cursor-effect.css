@@ -1,0 +1,70 @@
+.cursor-glow {
+    width: 20px;
+    height: 20px;
+    background: radial-gradient(
+      circle at center,
+      rgba(131, 58, 180, 0.3) 0%,
+      rgba(253, 29, 29, 0.2) 50%,
+      transparent 70%
+    );
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+                height 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+                background 0.3s ease-in-out;
+    mix-blend-mode: screen;
+  }
+  
+  /* Interactive elements base styles */
+  [data-glow]:hover {
+    background-image: linear-gradient(
+      90deg,
+      rgba(131, 58, 180, 1) 0%,
+      rgba(253, 29, 29, 1) 50%,
+      rgba(252, 176, 69, 1) 100%
+    );
+    background-size: 200% auto;
+    animation: gradientFlow 3s ease infinite;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  [data-glow]:hover ~ .cursor-glow {
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(
+      circle at center,
+      rgba(131, 58, 180, 0.4) 0%,
+      rgba(253, 29, 29, 0.3) 30%,
+      rgba(252, 176, 69, 0.2) 50%,
+      transparent 70%
+    );
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  }
+  
+  /* Smooth pulse animation */
+  @keyframes pulse {
+    0%, 100% { 
+      transform: translate(-50%, -50%) scale(1); 
+      opacity: 1;
+    }
+    50% { 
+      transform: translate(-50%, -50%) scale(1.1); 
+      opacity: 0.8;
+    }
+  }
+  
+  /* Gradient flow animation */
+  @keyframes gradientFlow {
+    0%, 100% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+  }
