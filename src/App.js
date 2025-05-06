@@ -2,6 +2,8 @@ import React, { Suspense, lazy } from 'react';
 import './App.css';
 import ErrorBoundary from './components/ErrorBoundary';
 import LoadingSpinner from './components/LoadingSpinner';
+import CursorEffect from './components/CursorEffect'; 
+
 
 // Lazy load components for better performance
 const Header = lazy(() => import('./components/Header'));
@@ -10,7 +12,9 @@ const Projects = lazy(() => import('./components/Projects'));
 
 function App() {
   return (
+    
     <ErrorBoundary>
+      <CursorEffect />
       <Suspense fallback={<LoadingSpinner />}>
         <div className="app-wrapper">
           <Header />
@@ -21,6 +25,7 @@ function App() {
         </div>
       </Suspense>
     </ErrorBoundary>
+   
   );
 }
 

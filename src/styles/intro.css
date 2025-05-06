@@ -77,6 +77,7 @@
   animation: fadeInScale 0.8s ease-out;
 }
 
+/* Update avatar styles */
 .intro-avatar {
   display: flex;
   justify-content: center;
@@ -90,11 +91,10 @@
 .intro-avatar img {
   width: 260px;
   height: 260px;
-  border-radius: 50%;
-  object-fit: contain;
-  z-index: 5;
-  position: relative;
+  object-fit: contain;  /* Changed from cover to contain */
   animation: float 4s ease-in-out infinite;
+  filter: drop-shadow(0 8px 32px rgba(31, 38, 135, 0.15));  /* Changed from box-shadow to filter */
+  /* Removed border-radius and background */
 }
 
 .intro-text {
@@ -324,12 +324,15 @@
 }
 
 /* Animations */
+/* Update float animation */
 @keyframes float {
   0%, 100% { 
-    transform: translateY(0px) scale(1);
+    transform: translateY(0px);
+    filter: drop-shadow(0 8px 32px rgba(31, 38, 135, 0.15));
   }
   50% { 
-    transform: translateY(-10px) scale(1.02);
+    transform: translateY(-10px);
+    filter: drop-shadow(0 12px 40px rgba(31, 38, 135, 0.2));
   }
 }
 
