@@ -1,70 +1,104 @@
 /* Wrapper layer to hold icons in background */
-  .background-icons-layer {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 0; /* keeps it behind main content */
-    overflow: hidden;
-    pointer-events: none;
-  }
-  
-  /* Each icon wrapper */
+.background-icons-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+
+/* Each icon wrapper */
+.background-icon-wrapper {
+  position: absolute;
+  pointer-events: none;
+  will-change: transform, opacity;
+  transition: transform 0.2s linear;
+  z-index: 0;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+}
+
+/* Update parallax animation class for immediate response */
+.background-icon-wrapper.parallax {
+  transform: translateZ(0);
+  transition: transform 0s;
+}
+
+/* Faster depth transitions */
+.background-icon-wrapper.depth-1 { 
+  transform: translateZ(-100px);
+  transition: transform 0s;
+}
+.background-icon-wrapper.depth-2 { 
+  transform: translateZ(-200px);
+  transition: transform 0s;
+}
+.background-icon-wrapper.depth-3 { 
+  transform: translateZ(-300px);
+  transition: transform 0s;
+}
+
+/* Remove hover transition delay */
+.background-icon-wrapper:hover {
+  transition-duration: 0s;
+}
+
+/* Icon-specific colors */
+.background-icon-wrapper.react-icon { color: #61dafb; }
+.background-icon-wrapper.node-icon { color: #3c873a; }
+.background-icon-wrapper.angular-icon { color: #dd1b16; }
+.background-icon-wrapper.js-icon { color: #f7df1e; }
+.background-icon-wrapper.python-icon { color: #306998; }
+.background-icon-wrapper.html-icon { color: #e34c26; }
+.background-icon-wrapper.css-icon { color: #264de4; }
+.background-icon-wrapper.git-icon { color: #f1502f; }
+.background-icon-wrapper.npm-icon { color: #cb3837; }
+.background-icon-wrapper.linux-icon { color: #000000; }
+.background-icon-wrapper.db-icon { color: #4db33d; }
+.background-icon-wrapper.bootstrap-icon { color: #563d7c; }
+.background-icon-wrapper.java-icon { color: #007396; }
+.background-icon-wrapper.vue-icon { color: #42b883; }
+.background-icon-wrapper.docker-icon { color: #2496ed; }
+.background-icon-wrapper.github-icon { color: #333; }
+.background-icon-wrapper.swift-icon { color: #f05138; }
+
+/* Ensure proper 3D context */
+.app-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  overflow-x: hidden;
+}
+
+main {
+  flex: 1;
+}
+
+/* Add smooth scrolling to container */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Optimize performance */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@media (prefers-reduced-motion: reduce) {
   .background-icon-wrapper {
-    position: absolute;
-    pointer-events: none;
-    will-change: transform, opacity;
-    transition: transform 0.3s ease-out;
-    z-index: 0;
+    transition: none;
   }
-  
-  /* Icon-specific colors */
-  .background-icon-wrapper.react-icon { color: #61dafb; }
-  .background-icon-wrapper.node-icon { color: #3c873a; }
-  .background-icon-wrapper.angular-icon { color: #dd1b16; }
-  .background-icon-wrapper.js-icon { color: #f7df1e; }
-  .background-icon-wrapper.python-icon { color: #306998; }
-  .background-icon-wrapper.html-icon { color: #e34c26; }
-  .background-icon-wrapper.css-icon { color: #264de4; }
-  .background-icon-wrapper.git-icon { color: #f1502f; }
-  .background-icon-wrapper.npm-icon { color: #cb3837; }
-  .background-icon-wrapper.linux-icon { color: #000000; }
-  .background-icon-wrapper.db-icon { color: #4db33d; }
-  .background-icon-wrapper.bootstrap-icon { color: #563d7c; }
-  .background-icon-wrapper.java-icon { color: #007396; }
-  .background-icon-wrapper.vue-icon { color: #42b883; }
-  .background-icon-wrapper.docker-icon { color: #2496ed; }
-  .background-icon-wrapper.github-icon { color: #333; }
-  .background-icon-wrapper.swift-icon { color: #f05138; }
-  /* Avatar container */
-  
-  /* Ensure icons stay behind everything */
-  .background-icons-layer {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 0 !important;
-    overflow: hidden;
-    pointer-events: none;
+  html {
+    scroll-behavior: auto;
   }
-  
-  .background-icon-wrapper {
-    z-index: 0 !important;
-    pointer-events: none;
-  }
-  
-  .app-wrapper {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  main {
-    flex: 1;
-  }
-  
-  
-  
+}
+
+

@@ -15,8 +15,8 @@ function Header() {
         {/* Collapsible Nav Links */}
         <Navbar.Collapse id="navbar-nav">
           <Nav className="ms-auto">
-            <Nav.Link data-glow className="mx-3" href="#projects">Projects</Nav.Link>
             <Nav.Link data-glow className="mx-3" href="#about">About</Nav.Link>
+            <Nav.Link data-glow className="mx-3" href="#project">Project</Nav.Link>
             <Nav.Link data-glow className="mx-3" href="#contact">Contact</Nav.Link>
           </Nav>
         </Navbar.Collapse>

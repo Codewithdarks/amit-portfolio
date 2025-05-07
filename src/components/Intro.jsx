@@ -4,9 +4,16 @@ import amitAvatar from '../resources/amit-avtar.svg';
 
 function Intro() {
   const scrollToNextSection = () => {
-    const nextSection = document.getElementById('projects');
+    const nextSection = document.getElementById('About');
     if (nextSection) {
-      nextSection.scrollIntoView({ behavior: 'smooth' });
+      // Add a small delay before scrolling
+      setTimeout(() => {
+        nextSection.scrollIntoView({ 
+          behavior: 'smooth',
+          block: 'start',
+          inline: 'nearest'
+        });
+      }, 100); 
     }
   };
 

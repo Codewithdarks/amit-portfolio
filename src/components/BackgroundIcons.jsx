@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useEffect, useState, useRef, useCallback } from 'react';
 import {
   FaReact, FaNodeJs, FaAngular, FaJsSquare, FaPython,
   FaHtml5, FaCss3Alt, FaGitAlt, FaNpm, FaLinux,
@@ -13,6 +13,7 @@ function BackgroundIcons() {
   const iconRefs = useRef([]);
   const transformTimeouts = useRef([]);
   const baseTransforms = useRef([]);
+  const containerRef = useRef(null);
 
   const iconList = [
     { Icon: FaReact, className: 'react-icon' },
@@ -65,6 +66,21 @@ function BackgroundIcons() {
     baseTransforms.current = newIcons.map(({ rotation }) => `rotate(${rotation}deg)`);
   };
 
+  const handleScroll = useCallback(() => {
+    if (!containerRef.current) return;
+    
+    const scrollPosition = window.scrollY;
+    const icons = containerRef.current.getElementsByClassName('floating-icon');
+    
+    Array.from(icons).forEach((icon, index) => {
+      const speed = index % 2 === 0 ? 0.5 : 0.3;
+      const yPos = scrollPosition * speed;
+      const scale = 1 - (scrollPosition * 0.001);
+      
+      icon.style.transform = `translate3d(0, ${yPos}px, 0) scale(${scale})`;
+    });
+  }, []);
+
   useEffect(() => {
     generateIcons();
 
@@ -98,14 +114,16 @@ function BackgroundIcons() {
     };
 
     window.addEventListener('mousemove', handleMouseMove);
+    window.addEventListener('scroll', handleScroll);
     return () => {
       window.removeEventListener('mousemove', handleMouseMove);
+      window.removeEventListener('scroll', handleScroll);
       transformTimeouts.current.forEach(timeout => clearTimeout(timeout));
     };
-  }, []);
+  }, [handleScroll]);
 
   return (
-    <div className="background-icons-layer">
+    <div className="background-icons" ref={containerRef}>
       {icons.map(({ id, Icon, className, size, top, left, rotation }, index) => (
         <motion.div
           key={id}
@@ -117,7 +135,7 @@ function BackgroundIcons() {
             duration: 0.6,
             ease: [0.25, 0.1, 0.25, 1]
           }}
-          className={`background-icon-wrapper ${className}`}
+          className={`background-icon-wrapper ${className} floating-icon`}
           style={{
             position: 'absolute',
             top: `${top}%`,

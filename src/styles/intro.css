@@ -266,6 +266,15 @@
   z-index: 10;
   animation: fadeInScale 0.8s ease-out 1s forwards;
   opacity: 0;
+  transition: transform 0.3s ease-in-out;
+}
+
+.scrolldown:hover {
+  transform: translateY(5px);
+}
+
+.scrolldown:active {
+  transform: translateY(8px);
 }
 
 .scrolldown:hover {
