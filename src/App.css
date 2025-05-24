@@ -11,8 +11,73 @@ body {
 /* Import other stylesheets */
 @import './styles/navbar.css';
 @import './styles/intro.css';
+@import './styles/about.css';
 @import './styles/projects.css';
 @import './styles/loading.css';
 @import './styles/intro.css';
 @import './styles/backgroundIcons.css';
+
+/* Add these styles to your existing CSS */
+.social-icons {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.social-icon {
+  font-size: 1.9rem;
+  color: #333;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-icon:hover {
+  color: #007bff;
+  transform: scale(1.2);
+}
+
+/* Theme toggle button styles */
+.theme-toggle {
+  background: none;
+  border: none;
+  padding: 8px;
+  margin-left: 20px;
+  cursor: pointer;
+  color: #333;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  font-size: 1.4rem;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.2) rotate(15deg);
+}
+
+.theme-toggle i {
+  font-size: 1.2rem;
+}
+
+/* Dark mode icon specific styles */
+.theme-toggle .bi-moon-stars-fill {
+  color: #5c63fd;
+}
+
+.theme-toggle .bi-sun-fill {
+  color: #ffa726;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+  .social-icons {
+    margin-top: 1rem;
+    justify-content: center;
+    flex-direction: row;
+    gap: 2rem;
+  }
+
+  .theme-toggle {
+    margin: 1rem 0 0 1rem;
+  }
+}
 

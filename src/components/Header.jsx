@@ -1,23 +1,89 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Navbar, Nav, Container } from 'react-bootstrap';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import '../App.css';
 
 function Header() {
+  const [isDark, setIsDark] = useState(false);
+
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
-    <Navbar expand="lg" fixed="top" className="thin-navbar blur-navbar custom-navbar" >
+    <Navbar expand="lg" fixed="top" className="thin-navbar blur-navbar custom-navbar">
       <Container>
         <Navbar.Brand data-glow href="#home">CodeWithDarks</Navbar.Brand>
 
-        {/* Hamburger Menu Button */}
         <Navbar.Toggle aria-controls="navbar-nav" />
 
-        {/* Collapsible Nav Links */}
         <Navbar.Collapse id="navbar-nav">
-          <Nav className="ms-auto">
-            <Nav.Link data-glow className="mx-3" href="#about">About</Nav.Link>
-            <Nav.Link data-glow className="mx-3" href="#project">Project</Nav.Link>
-            <Nav.Link data-glow className="mx-3" href="#contact">Contact</Nav.Link>
+          {/* Center Navigation Links */}
+          <Nav className="mx-auto">
+            <Nav.Link 
+              data-glow 
+              className="mx-3" 
+              href="#about"
+              onClick={() => scrollToSection('About')}
+            >
+              Skills
+            </Nav.Link>
+            <Nav.Link 
+              data-glow 
+              className="mx-3" 
+              href="#projects"
+              onClick={() => scrollToSection('projects')}
+            >
+              Projects
+            </Nav.Link>
+            <Nav.Link 
+              data-glow 
+              className="mx-3" 
+              href="#contact"
+              onClick={() => scrollToSection('contact')}
+            >
+              Contact
+            </Nav.Link>
+          </Nav>
+
+          {/* Social Media Icons */}
+          <Nav className="social-icons">
+            <Nav.Link 
+              href="https://linkedin.com/in/your-profile" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="social-icon"
+            >
+              <i className="bi bi-linkedin"></i>
+            </Nav.Link>
+            <Nav.Link 
+              href="https://github.com/your-username" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="social-icon"
+            >
+              <i className="bi bi-github"></i>
+            </Nav.Link>
+            <Nav.Link 
+              href="https://instagram.com/your-profile" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="social-icon"
+            >
+              <i className="bi bi-instagram"></i>
+            </Nav.Link>
+            
+            {/* Simple Theme Toggle Button */}
+            <button 
+              className="theme-toggle"
+              onClick={() => setIsDark(!isDark)}
+              aria-label="Toggle theme"
+            >
+              <i className={`bi ${isDark ? 'bi-moon-stars-fill' : 'bi-sun-fill'}`}></i>
+            </button>
           </Nav>
         </Navbar.Collapse>
       </Container>

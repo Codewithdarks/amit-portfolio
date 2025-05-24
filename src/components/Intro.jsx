@@ -4,7 +4,7 @@ import amitAvatar from '../resources/amit-avtar.svg';
 
 function Intro() {
   const scrollToNextSection = () => {
-    const nextSection = document.getElementById('About');
+    const nextSection = document.getElementById('about');
     if (nextSection) {
       // Add a small delay before scrolling
       setTimeout(() => {
@@ -35,8 +35,8 @@ function Intro() {
               Hi, I am <span className="highlight animate-infinite">Amit Tiwari</span>
             </h1>
             <p className="intro-subtext">
-              A passionate <strong data-glow>Junior MERN Stack Developer</strong> with hands-on experience in building dynamic web applications using 
-              <strong data-glow> React.js, Node.js, Express.js,</strong> and <strong data-glow>MongoDB</strong>.
+              A passionate <strong data-glow>Software Developer</strong> with hands-on 1 year experience in building dynamic web applications and softwares using 
+              <strong data-glow> PHP, JAVA, JavaScript, React.js, Node.js, Express.js,</strong> and <strong data-glow>MongoDB</strong>.
             </p>
           </div>
         </div>

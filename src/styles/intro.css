@@ -419,3 +419,22 @@
     bottom: 20px;
   }
 }
+
+/* Mobile adjustments for avatar */
+@media screen and (max-width: 768px) {
+  .intro-avatar {
+    margin-top: 4rem; /* Adds space at the top on mobile */
+    margin-bottom: 2rem; /* Maintains some space below */
+  }
+  
+  .intro-content-blur {
+    padding-top: 2rem; /* Adjust overall content padding */
+  }
+}
+
+/* For even smaller screens */
+@media screen and (max-width: 480px) {
+  .intro-avatar {
+    margin-top: 5rem; /* More space for smaller devices */
+  }
+}
