@@ -169,12 +169,7 @@
   width: 300px;
   height: 300px;
   border-radius: 50%;
-  background: linear-gradient(
-    141deg,
-    rgba(131, 58, 180, 0.5) 27%,
-    rgba(253, 29, 29, 0.5) 73%,
-    rgba(252, 176, 69, 0.5) 100%
-  );
+  background: linear-gradient(90deg, #6C63FF 0%, #48C6EF 100%);
   filter: blur(20px);
   opacity: 0;
   animation: blobMove 2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
@@ -205,10 +200,7 @@
   height: 40px;
   border: 2px solid transparent;
   background: linear-gradient(white, white) padding-box,
-              linear-gradient(141deg,
-                rgba(131, 58, 180, 1) 27%,
-                rgba(253, 29, 29, 1) 73%,
-                rgba(252, 176, 69, 1) 100%) border-box;
+              linear-gradient(90deg, #6C63FF 0%, #48C6EF 100%) border-box;
   border-radius: 15px;
   position: relative;
   margin-bottom: 10px;
@@ -224,12 +216,7 @@
   content: '';
   width: 4px;
   height: 8px;
-  background: linear-gradient(
-    141deg,
-    rgba(131, 58, 180, 1) 27%,
-    rgba(253, 29, 29, 1) 73%,
-    rgba(252, 176, 69, 1) 100%
-  );
+  background: linear-gradient(90deg, #6C63FF 0%, #48C6EF 100%);
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -253,10 +240,7 @@
   height: var(--sizeY);
   border: calc(var(--sizeX) / 10) solid transparent;
   background: linear-gradient(white, white) padding-box,
-              linear-gradient(141deg,
-                rgba(131, 58, 180, 1) 27%,
-                rgba(253, 29, 29, 1) 73%,
-                rgba(252, 176, 69, 1) 100%) border-box;
+              linear-gradient(90deg, #6C63FF 0%, #48C6EF 100%) border-box;
   border-radius: 50px;
   box-sizing: border-box;
   transform: translateX(-50%);
@@ -319,10 +303,7 @@
   transform: rotate(45deg);
   animation: pulse54012 1.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
   border-color: transparent;
-  background: linear-gradient(141deg,
-    rgba(131, 58, 180, 1) 27%,
-    rgba(253, 29, 29, 1) 73%,
-    rgba(252, 176, 69, 1) 100%);
+  background: linear-gradient(90deg, #6C63FF 0%, #48C6EF 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -396,12 +377,7 @@
 
 /* Add this new class */
 .animate-infinite {
-  background: linear-gradient(
-    141deg,
-    rgba(131, 58, 180, 1) 27%,
-    rgba(253, 29, 29, 1) 73%,
-    rgba(252, 176, 69, 1) 100%
-  );
+  background: linear-gradient(90deg, #6C63FF 0%, #48C6EF 100%);
   background-size: 200% auto;
   -webkit-background-clip: text;
   background-clip: text;

@@ -9,7 +9,7 @@ const Header = lazy(() => import('./components/Header'));
 const Intro = lazy(() => import('./components/Intro'));
 const About = lazy(() => import('./components/About'));
 const Projects = lazy(() => import('./components/Projects'));
-
+const Footer = lazy(() => import('./components/Footer'));
 function App() {
   return (
     <ErrorBoundary>
@@ -21,6 +21,7 @@ function App() {
             <Intro />
             <About />
             <Projects />
+            <Footer />
           </main>
         </div>
       </Suspense>

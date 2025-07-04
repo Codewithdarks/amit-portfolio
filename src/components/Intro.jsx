@@ -36,7 +36,7 @@ function Intro() {
             </h1>
             <p className="intro-subtext">
               A passionate <strong data-glow>Software Developer</strong> with hands-on 1 year experience in building dynamic web applications and softwares using 
-              <strong data-glow> PHP, JAVA, JavaScript, React.js, Node.js, Express.js,</strong> and <strong data-glow>MongoDB</strong>.
+              <strong data-glow> Python,Django,Flask, JavaScript, React.js, Node.js, Express.js,</strong> and <strong data-glow>MongoDB, PostgreSQL</strong>.
             </p>
           </div>
         </div>

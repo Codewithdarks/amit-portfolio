@@ -3,8 +3,8 @@
     height: 20px;
     background: radial-gradient(
       circle at center,
-      rgba(131, 58, 180, 0.3) 0%,
-      rgba(253, 29, 29, 0.2) 50%,
+      #6C63FF4D 0%,   /* #6C63FF with 30% opacity */
+      #48C6EF33 50%,  /* #48C6EF with 20% opacity */
       transparent 70%
     );
     border-radius: 50%;
@@ -22,9 +22,8 @@
   [data-glow]:hover {
     background-image: linear-gradient(
       90deg,
-      rgba(131, 58, 180, 1) 0%,
-      rgba(253, 29, 29, 1) 50%,
-      rgba(252, 176, 69, 1) 100%
+      #6C63FF 0%,
+      #48C6EF 100%
     );
     background-size: 200% auto;
     animation: gradientFlow 3s ease infinite;
@@ -39,9 +38,9 @@
     height: 100px;
     background: radial-gradient(
       circle at center,
-      rgba(131, 58, 180, 0.4) 0%,
-      rgba(253, 29, 29, 0.3) 30%,
-      rgba(252, 176, 69, 0.2) 50%,
+      #6C63FF66 0%,   /* #6C63FF with 40% opacity */
+      #48C6EF4D 30%,  /* #48C6EF with 30% opacity */
+      #48C6EF33 50%,  /* #48C6EF with 20% opacity */
       transparent 70%
     );
     animation: pulse 2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
