@@ -43,11 +43,8 @@ function Projects() {
             <span className="tech-badge">css</span>
           </div>
           <div className="project-links">
-            <a href="https://github.com/codewithdarks/amit-portfolio" target="_blank" rel="noopener noreferrer" className="project-link">
+            <a href="https://github.com/Codewithdarks/amit-portfolio" target="_blank" rel="noopener noreferrer" className="project-link">
               GitHub
-            </a>
-            <a href="https://your-portfolio.netlify.app/" target="_blank" rel="noopener noreferrer" className="project-link">
-              Live Demo
             </a>
           </div>
         </div>
@@ -55,7 +52,7 @@ function Projects() {
         <div className="project-card">
           <h2 className="project-title">Sentiment Analysis</h2>
           <p className="project-desc">
-            A RESTful API for managing daily tasks, with JWT authentication and MongoDB backend.
+            Sentiment Analysis is a python project in which we use find the sentiments behind the user post like from twitter and then we disply it through react we are NLP and Bert for AI working.
           </p>
           <div className="project-tech">
             <span className="tech-badge">Python</span>
@@ -98,7 +95,7 @@ function Projects() {
             <span className="tech-badge">java</span>
           </div>
           <div className="project-links">
-            <a href="https://github.com/your-username/weather-app" target="_blank" rel="noopener noreferrer" className="project-link">
+            <a href="https://github.com/Codewithdarks/APICollection" target="_blank" rel="noopener noreferrer" className="project-link">
               GitHub
             </a>
           
@@ -129,7 +126,7 @@ function Projects() {
             <span className="tech-badge">express</span>
           </div>
           <div className="project-links">
-            <a href="https://github.com/your-username/weather-app" target="_blank" rel="noopener noreferrer" className="project-link">
+            <a href="https://github.com/Codewithdarks/EnterpriseApp" target="_blank" rel="noopener noreferrer" className="project-link">
               GitHub
             </a>
            

@@ -57,8 +57,28 @@
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-  .thin-navbar {
-    margin: 0;
-    border-radius: 0;
+  /* Target the actual container of your social icons */
+  .social-icons,
+  .navbar-nav .social-icons,
+  .navbar-collapse .social-icons,
+  .navbar-collapse .navbar-nav .social-icons,
+  .navbar-collapse .navbar-nav .nav-item.social-icons {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 0.8rem !important;
+    width: 100%;
+  }
+
+  /* Make sure each icon/link is inline-flex */
+  .social-icons a,
+  .navbar-nav .social-icons a,
+  .navbar-collapse .social-icons a,
+  .navbar-collapse .navbar-nav .social-icons a,
+  .navbar-collapse .navbar-nav .nav-item.social-icons a {
+    display: inline-flex !important;
+    align-items: center !important;
+    margin: 0 0.2rem !important;
   }
 }

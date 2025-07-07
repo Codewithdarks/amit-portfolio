@@ -52,7 +52,7 @@ function Header() {
           {/* Social Media Icons */}
           <Nav className="social-icons">
             <Nav.Link 
-              href="https://linkedin.com/in/your-profile" 
+              href="https://www.linkedin.com/in/codewithamittiwari/" 
               target="_blank" 
               rel="noopener noreferrer"
               className="social-icon"
@@ -60,7 +60,7 @@ function Header() {
               <i className="bi bi-linkedin"></i>
             </Nav.Link>
             <Nav.Link 
-              href="https://github.com/your-username" 
+              href="https://github.com/Codewithdarks" 
               target="_blank" 
               rel="noopener noreferrer"
               className="social-icon"
@@ -68,7 +68,7 @@ function Header() {
               <i className="bi bi-github"></i>
             </Nav.Link>
             <Nav.Link 
-              href="https://instagram.com/your-profile" 
+              href="https://www.instagram.com/amittiwari_0104/" 
               target="_blank" 
               rel="noopener noreferrer"
               className="social-icon"
@@ -76,14 +76,7 @@ function Header() {
               <i className="bi bi-instagram"></i>
             </Nav.Link>
             
-            {/* Simple Theme Toggle Button */}
-            <button 
-              className="theme-toggle"
-              onClick={() => setIsDark(!isDark)}
-              aria-label="Toggle theme"
-            >
-              <i className={`bi ${isDark ? 'bi-moon-stars-fill' : 'bi-sun-fill'}`}></i>
-            </button>
+            
           </Nav>
         </Navbar.Collapse>
       </Container>

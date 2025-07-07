@@ -2,7 +2,7 @@
   "name": "amit-portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://codewithdarks.github.io/portfolio",
+  "homepage": "https://Codewithdarks.github.io/amit-portfolio",
   "dependencies": {
     "@rive-app/react-canvas": "^4.19.0",
     "@testing-library/dom": "^10.4.0",
