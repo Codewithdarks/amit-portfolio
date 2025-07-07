@@ -1,0 +1,43 @@
+{
+  "files": {
+    "main.css": "/amit-portfolio/static/css/main.096d6ce3.css",
+    "main.js": "/amit-portfolio/static/js/main.87e00751.js",
+    "static/js/660.9be5ec10.chunk.js": "/amit-portfolio/static/js/660.9be5ec10.chunk.js",
+    "static/js/687.12195ba6.chunk.js": "/amit-portfolio/static/js/687.12195ba6.chunk.js",
+    "static/css/282.58b4844b.chunk.css": "/amit-portfolio/static/css/282.58b4844b.chunk.css",
+    "static/js/282.703c4c91.chunk.js": "/amit-portfolio/static/js/282.703c4c91.chunk.js",
+    "static/css/608.5c37c592.chunk.css": "/amit-portfolio/static/css/608.5c37c592.chunk.css",
+    "static/js/608.1f92792d.chunk.js": "/amit-portfolio/static/js/608.1f92792d.chunk.js",
+    "static/css/560.ff984574.chunk.css": "/amit-portfolio/static/css/560.ff984574.chunk.css",
+    "static/js/560.c75daa34.chunk.js": "/amit-portfolio/static/js/560.c75daa34.chunk.js",
+    "static/js/453.3aa18055.chunk.js": "/amit-portfolio/static/js/453.3aa18055.chunk.js",
+    "static/js/184.632105f5.chunk.js": "/amit-portfolio/static/js/184.632105f5.chunk.js",
+    "static/js/243.408a140d.chunk.js": "/amit-portfolio/static/js/243.408a140d.chunk.js",
+    "static/js/983.0e111a53.chunk.js": "/amit-portfolio/static/js/983.0e111a53.chunk.js",
+    "static/js/355.4094bd98.chunk.js": "/amit-portfolio/static/js/355.4094bd98.chunk.js",
+    "static/media/amit-avtar.svg": "/amit-portfolio/static/media/amit-avtar.bfff748a9b2cbc566902356e1420f0ef.svg",
+    "static/media/rollerskatingwave.png": "/amit-portfolio/static/media/rollerskatingwave.6935fadf5ca660d401d5.png",
+    "static/media/bootstrap-icons.woff?": "/amit-portfolio/static/media/bootstrap-icons.39795c0b4513de014cf8.woff",
+    "static/media/bootstrap-icons.woff2?": "/amit-portfolio/static/media/bootstrap-icons.b7bcc075b395c14ce8c2.woff2",
+    "index.html": "/amit-portfolio/index.html",
+    "main.096d6ce3.css.map": "/amit-portfolio/static/css/main.096d6ce3.css.map",
+    "main.87e00751.js.map": "/amit-portfolio/static/js/main.87e00751.js.map",
+    "660.9be5ec10.chunk.js.map": "/amit-portfolio/static/js/660.9be5ec10.chunk.js.map",
+    "687.12195ba6.chunk.js.map": "/amit-portfolio/static/js/687.12195ba6.chunk.js.map",
+    "282.58b4844b.chunk.css.map": "/amit-portfolio/static/css/282.58b4844b.chunk.css.map",
+    "282.703c4c91.chunk.js.map": "/amit-portfolio/static/js/282.703c4c91.chunk.js.map",
+    "608.5c37c592.chunk.css.map": "/amit-portfolio/static/css/608.5c37c592.chunk.css.map",
+    "608.1f92792d.chunk.js.map": "/amit-portfolio/static/js/608.1f92792d.chunk.js.map",
+    "560.ff984574.chunk.css.map": "/amit-portfolio/static/css/560.ff984574.chunk.css.map",
+    "560.c75daa34.chunk.js.map": "/amit-portfolio/static/js/560.c75daa34.chunk.js.map",
+    "453.3aa18055.chunk.js.map": "/amit-portfolio/static/js/453.3aa18055.chunk.js.map",
+    "184.632105f5.chunk.js.map": "/amit-portfolio/static/js/184.632105f5.chunk.js.map",
+    "243.408a140d.chunk.js.map": "/amit-portfolio/static/js/243.408a140d.chunk.js.map",
+    "983.0e111a53.chunk.js.map": "/amit-portfolio/static/js/983.0e111a53.chunk.js.map",
+    "355.4094bd98.chunk.js.map": "/amit-portfolio/static/js/355.4094bd98.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.096d6ce3.css",
+    "static/js/main.87e00751.js"
+  ]
+}
